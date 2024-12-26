@@ -1,0 +1,21 @@
+<h1> {{ title | titlecase }} </h1>
+
+
+<div *ngIf="user | async as user">
+  <h3>Angular 16 or earlierway of calling async data</h3>
+  <p> {{ user.name }} </p>
+  <p> {{ user.email }} </p>
+</div>
+
+@if (user | async; as user) {
+ <div>
+  <h3> Angular 17 or later way of calling async data</h3>
+  <p> {{ user.name }} </p>
+  <p> {{ user.email }} </p>
+</div> 
+}
+
+<div>
+  <h3> User Data </h3>
+  <pre>{{ userData | json }}</pre>
+</div>

@@ -1,0 +1,26 @@
+<h1> {{ title | titlecase }}</h1>
+
+<div>
+  <h3> <a href="https://angular.dev/api/common/DatePipe">{{ datePipe }} </a></h3>
+  <p> Date as 'shortDate' format: {{ today | date:'shortDate' }} </p>
+  <p> Date as 'mediumDate' format: {{ today | date:'mediumDate' }} </p>
+  <p> Date as 'longDate' format: {{ today | date:'longDate' }} </p>
+  <p> Date as 'dd-MMM-yyyy' format: {{ today | date:'dd-MMM-yyyy' }} </p>
+  <p> Full date format: {{ today | date:'fullDate' }} </p>
+</div>
+
+<div>
+  <h3> <a href="https://angular.dev/api/common/CurrencyPipe">{{ currencyPipe }} </a></h3>
+  <p> {{ amount}} </p>
+  <p> {{ amount | currency }} </p>
+  <p> {{ amount | currency:'EUR' }} </p>
+  <p> {{ amount | currency:'GBP' }} </p>
+  <p> {{ amount | currency:'INR' }} </p>
+  <p> {{ amount | currency:'USD' : 'symbol' : '1.2-2' }} </p>
+</div>
+
+<div>
+  <h3> {{ customPipe }} </h3>
+  <p> {{ name | append : 'hello': 'prefix' | titlecase }} </p>
+</div>
+

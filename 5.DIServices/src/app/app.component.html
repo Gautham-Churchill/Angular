@@ -1,0 +1,12 @@
+<h1> {{ title | titlecase }}</h1>
+
+<div>
+  <p>{{ data }}</p>
+</div>
+
+@for (post of posts ; track post.id) {
+  <div>
+    <h3>{{ post.title | titlecase }}</h3>
+    <p>{{ post.body }}</p>
+  </div>
+}

@@ -1,0 +1,32 @@
+<h1>{{title}}</h1>
+
+<div>
+  <h1>{{ ifElse }}</h1>
+  
+  <div *ngIf="isLoggedIn">Welcome {{userName}}</div>
+  <div *ngIf="!isLoggedIn">Please login</div>
+
+
+  <div *ngIf="isLoggedIn; else loggedOut">Welcome {{userName}}</div>
+  <ng-template #loggedOut>
+    <div>Please login</div>
+  </ng-template>
+</div>
+
+<div>
+  <h1>{{ forLoop }}</h1>
+  <ul>
+    <li *ngFor="let name of names">{{name}}</li>
+  </ul>
+</div>
+
+<div>
+  <h1>{{ switchCase }}</h1>
+  <div [ngSwitch]="grade">
+    <p *ngSwitchCase="'A'">Excellent</p>
+    <p *ngSwitchCase="'B'">Good</p>
+    <p *ngSwitchCase="'C'">Average</p>
+    <p *ngSwitchCase="'D'">Below Average</p>
+    <p *ngSwitchDefault>Fail</p>
+  </div>
+</div>

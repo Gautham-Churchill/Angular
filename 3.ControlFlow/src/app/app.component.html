@@ -1,0 +1,40 @@
+<h1> {{title}} </h1>
+
+<!-- Angular 17 or later -->
+<div> 
+  <h3> {{ ifElse }} </h3>
+  @if (a > b) {
+    <p>{{ a }} is greater than {{ b }}</p>
+  } @else {
+    <p>{{ a }} is less than {{ b }}</p>
+  }
+</div>
+
+<div>
+  <h3><a href="https://angular.dev/guide/templates/control-flow#contextual-variables-in-for-blocks"> {{ forLoop }} </a></h3>
+  <ul>
+    <!-- $index, $count, $first, $last, $even, $odd -->
+    @for (item of items; track item.id) {
+      <li>{{ item.name }}</li>
+    } @empty {
+      <li aria-hidden="true"> There are no items. </li>
+    }
+  </ul>
+</div>
+
+<div>
+  <h3> {{ switchCase }} </h3>
+  @switch (grade) {
+    @case ('A') {
+      <p>Excellent</p>
+    } @case ('B') {
+      <p>Good</p>
+    } @case ('C') {
+      <p>Average</p>
+    } @case ('D') {
+      <p>Below Average</p>
+    } @default {
+      <p>Fail</p>
+    }
+  }
+</div>
