@@ -1,0 +1,7 @@
+<h1>{{ title | titlecase }}</h1>
+<div>
+  <h3> Task List </h3>
+  @for(task of tasks; track task) {
+    <app-task [val]="task" (taskDeleted)="deleteTask(task)"></app-task>
+  }
+</div>

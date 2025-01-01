@@ -1,0 +1,63 @@
+{
+    "languages": [
+        { "id": 1, "name": "Java"},
+        { "id": 2, "name": "Python"},
+        { "id": 3, "name": "C#"},
+        { "id": 4, "name": "JavaScript"},
+        { "id": 5, "name": "TypeScript"}
+    ],
+    "student": {
+        "id": 1,
+        "name": "John",
+        "phone": "1234567890",
+        "age": "21",
+        "languages": ["Java", "Python", "C#", "JavaScript", "TypeScript"]
+    },
+    "orderbook": {
+        "BuyOrders": [
+            {
+                "OrderType": "LimitBid",
+                "Price": 100.00,
+                "Volume": 0.01
+            },
+            {
+                "OrderType": "LimitBid",
+                "Price": 490.0,
+                "Volume": 1.0
+            }
+        ],
+        "CreatedTimeStampUtc": "2023-01-01T06:42:11.000Z",
+        "SellOrders": [
+            {
+                "OrderType": "LimitOffer",
+                "Price": 500.00,
+                "Volume": 1.0
+            },
+            {
+                "OrderType": "LimitOffer",
+                "Price": 505.00,
+                "Volume": 1.0
+            }
+        ]
+    },
+    "latestprices": {
+        "status": "ok",
+        "prices": {
+            "btc": {
+                "bid": "2352",
+                "ask": "3453",
+                "last": "5252"
+            },
+            "ltc": {
+                "bid": "0.342",
+                "ask": "0.343",
+                "last": "0.643"
+            },
+            "doge": {
+                "bid": "23.5",
+                "ask": "23.543",
+                "last": "234"
+            }
+        }
+    }
+}

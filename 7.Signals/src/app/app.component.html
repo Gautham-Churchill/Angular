@@ -1,0 +1,18 @@
+<h1> {{ title | titlecase }} </h1>
+
+<input 
+    [value]="newTodoText()" 
+    (input)="handleInput($event)"
+    placeholder="What needs to be done?"
+/>
+<button (click)="addTodo()">Add Todo</button>
+
+<p>Things todo: {{ total() }}</p>
+<ul>
+    @for (todo of todos(); track $index) {
+        <li>
+            {{ todo.text }}
+            <button (click)="deleteTodo(todo.id)">Delete</button>
+        </li>
+    }
+</ul>

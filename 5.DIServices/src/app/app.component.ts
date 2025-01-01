@@ -7,7 +7,7 @@ import { Data } from './interfaces/data';
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CommonModule],
+  imports: [CommonModule],
   providers: [DataService],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
